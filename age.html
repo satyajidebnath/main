@@ -1,52 +1,514 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year 2025</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #ff6347;
-        }
-        input, button {
-            padding: 10px;
-            font-size: 16px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        button {
-            background-color: #ff6347;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #e55347;
-        }
-    </style>
-</head>
-<body>
-    <h1>Happy New Year!</h1>
-    <p>Enter your name to receive a personalized New Year message:</p>
-    <input type="text" id="userName" placeholder="Enter your name" />
-    <button onclick="showWish()">Send Wish</button>
 
-    <p id="wishMessage" style="font-size: 20px; color: #2f4f4f; font-weight: bold;"></p>
 
-    <script>
-        function showWish() {
-            var name = document.getElementById("userName").value;
-            var message = name ? "Happy New Year, " + name + "! Wishing you a year full of joy, success, and happiness!" : "Please enter your name.";
-            document.getElementById("wishMessage").textContent = message;
+
+
+
+
+<form method="post">
+
+
+
+    <div class="panel-body" >
+
+        <h1>Today's Date</h1>
+
+        <label class="head">Date</label>
+
+        <label class="head">Month</label>
+
+        <label class="head">Year</label><br>
+
+        <select id="cd" class="">
+
+
+
+            <script>
+
+                                        var today = new Date();
+
+                                        var dd = today.getDate();
+
+                                        document.write("<option>"+dd+"</option>");
+
+                                        for(i=1;i<=31;i++)
+
+                                        {
+
+                                            document.write("<option>"+i+"</option>");
+
+                                        }
+
+                                    </script>
+
+        </select>
+
+        <select id="cm">
+
+
+
+            <script>
+
+                                            var today = new Date();
+
+                                            var mm = today.getMonth()+1;
+
+                                            document.write("<option>"+mm+"</option>");
+
+                                            for(i=1;i<=12;i++)
+
+                                            {
+
+                                                document.write("<option>"+i+"</option>");
+
+                                            }
+
+                                        </script>
+
+        </select>
+
+        <select id="cy">
+
+            <script>
+
+                                            var today = new Date();
+
+                                            var yy = today.getFullYear();
+
+                                            document.write("<option>"+yy+"</option>");
+
+                                            for(i=2023;i>=1900;i--)
+
+                                            {
+
+                                                document.write("<option>"+i+"</option>");
+
+                                            }
+
+                                        </script>
+
+        </select><br><br><br><br>
+
+
+
+        <h1>Select Your Birthday</h1>
+
+
+
+
+
+        <select id="yd">
+
+            <option>
+
+                Date
+
+            </option>
+
+            <script>
+
+                                    for(i=1;i<=31;i++)
+
+                                    {
+
+                                        document.write("<option>"+i+"</option>");
+
+                                    }
+
+                                </script>
+
+        </select>
+
+        <select id="ym">
+
+            <option>
+
+                Month
+
+            </option>
+
+            <script>
+
+                                        for(i=1;i<=12;i++)
+
+                                        {
+
+                                            document.write("<option>"+i+"</option>");
+
+                                        }
+
+                                    </script>
+
+        </select>
+
+        <select id="yy">
+
+            <option>
+
+                Year
+
+            </option>
+
+            <script>
+
+                                        for(i=2023;i>=1900;i--)
+
+                                        {
+
+                                            document.write("<option>"+i+"</option>");
+
+                                        }
+
+                                    </script>
+
+        </select><br><br><br><br><br><br>
+
+
+
+        <input type="button" id="submit" onclick="return fun();" value="Calcaulate" class="btn btn-success" style="background-color:#00C6FF; font-weight:bolder;" >
+
+
+
+
+
+        <br>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <h2>Your age is:</h2><br><br>
+
+
+
+
+
+        <label class="show_label" id="disp_year" style="color:red"></label><br><br>
+
+        <label class="show_label" id="disp_month" style="color:blue"></label><br><br>
+
+        <label class="show_label" id="disp_days" style="color:deeppink"></label><br><br>
+
+        <br><br><br><br> <input type="reset" value="Reset" onclick="clr();" class="btn btn-danger" style="background-color:#00C6FF; font-weight:bolder;"><br><br><br><br><br><br>
+
+    </div>
+
+
+
+</form>
+
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+  label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}
+
+.panel-body
+    {text-align: center}
+select
+
+{
+
+font-size: 26px;
+border-radius: 5px;
+width: 105px;
+margin-left: 2px;
+margin-right: 2px;
+text-align: center;
+box-shadow: 1px 1px 2px #666;
+border: 1px solid #044284;
+padding: 4px;
+
+}
+
+
+
+.btn
+
+{
+
+    background-color: #518428;
+font-weight: bolder;
+font-size: 40px;
+border-radius: 5px;
+color: white;
+box-shadow: 1px 1px 2px #666;
+border: 1px solid #044284;
+
+}
+
+#submit
+
+{
+
+    margin-left: 0px;
+
+}
+
+label, h3, h4
+
+{
+
+    color: black;
+margin-left: 35px;
+margin-right: 35px;
+font-size: 18px;
+
+}
+
+.show_label
+
+{
+
+font-size: 70px;
+margin-left: 5px;
+margin-right: 5px;
+line-height: 70px;
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+  function fun()
+
+        {
+
+            // get current date detail
+
+            var c_date=parseInt(document.getElementById("cd").value);
+
+            var c_month=parseInt(document.getElementById("cm").value);
+
+            var c_year=parseInt(document.getElementById("cy").value);
+
+
+
+            // get DOB
+
+            var d_date=parseInt(document.getElementById("yd").value);
+
+            var d_month=parseInt(document.getElementById("ym").value);
+
+            var d_year=parseInt(document.getElementById("yy").value);
+
+            var disp_year=document.getElementById("disp_year");
+
+            var disp_month=document.getElementById("disp_month");
+
+            var disp_days=document.getElementById("disp_days");
+
+            var dd_date=document.getElementById("yd").value;
+
+            var dd_month=document.getElementById("ym").value;
+
+            var dd_year=document.getElementById("yy").value;
+
+            if(dd_date=="Date" || dd_month=="Month" || dd_year=="Year")
+
+            {
+
+                alert("Please select your Birthday");
+
+                return false;
+
+            }
+
+           // alert(c_date+d_date);
+
+            // program logic
+
+              // condition if dob date is > current date
+
+                if(d_date>c_date)
+
+                {
+
+                    if(d_month==1 ||d_month==3 || d_month==5 || d_month==7 || d_month==8 || d_month==10 || d_month==12)
+
+                    {
+
+                         c_date=c_date+31;
+
+                    }
+
+                    if(d_month==4 ||d_month==6 || d_month==9 || d_month==11 )
+
+                    {
+
+                         c_date=c_date+30;
+
+                    }
+
+                    if(d_month==2)
+
+                    {
+
+                        if(d_year%4==0)
+
+                        {
+
+                            c_date=c_date+29;
+
+                        }
+
+                        else
+
+                        {
+
+                            c_date=c_date+28;
+
+                        }
+
+                    }
+
+                     y_date=c_date-d_date;
+
+                     c_month=c_month-1;
+
+                }
+
+                // if dob date is !> current date
+
+                else
+
+                {
+
+                    y_date=c_date-d_date;
+
+                }
+
+                if(d_month>c_month)
+
+                {
+
+                    c_month=c_month+12;
+
+                    y_month=c_month-d_month;
+
+                    c_year=c_year-1;
+
+                }
+
+                else
+
+                {
+
+                    y_month=c_month-d_month;
+
+                }
+
+                y_year=c_year-d_year;
+
+                if(y_year<0 || y_month<0 || y_date<0 )
+
+                {
+
+                      alert("Current date should be greater then or equal to your Birthday");
+
+                      return false;
+
+                }
+
+                else
+
+                {
+
+                disp_year.innerHTML=y_year+" Year";
+
+                disp_month.innerHTML=y_month+"  Month";
+
+                disp_days.innerHTML=y_date+"  Days";
+
+                }
+// scroll down to result section
+  document.body.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
         }
-    </script>
-</body>
-</html>
+
+        function clr()
+
+        {
+
+           // alert("ok");
+
+            var disp_year=document.getElementById("disp_year");
+
+            var disp_month=document.getElementById("disp_month");
+
+            var disp_days=document.getElementById("disp_days");
+
+
+
+            disp_year.innerHTML="";
+
+            disp_month.innerHTML="";
+
+            disp_days.innerHTML="";
+
+
+          // scroll down to result section
+  document.body.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+
+}
+
+
+
+</script>
