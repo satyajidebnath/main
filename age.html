@@ -618,20 +618,7 @@ line-height: 70px;
 </script>
 
 
-        <!-- Slider Containers -->
-        <div id="slider1" class="slider-container">
-            <img src="https://via.placeholder.com/1200x800?text=Home+Slider" alt="Home Slider">
-        </div>
-        <div id="slider2" class="slider-container">
-            <img src="https://via.placeholder.com/1200x800?text=About+Slider" alt="About Slider">
-        </div>
-        <div id="slider3" class="slider-container">
-            <img src="https://via.placeholder.com/1200x800?text=Services+Slider" alt="Services Slider">
-        </div>
-        <div id="slider4" class="slider-container">
-            <img src="https://via.placeholder.com/1200x800?text=Contact+Slider" alt="Contact Slider">
-        </div>
-    </div>
+    
 
     <!-- Footer -->
     <footer>
@@ -649,12 +636,7 @@ line-height: 70px;
             document.getElementById("sideMenu").style.left = "-100%";  // Hide the side menu
         }
 
-        // Show the appropriate slider
-        function showSlider(sliderId) {
-            const sliders = document.querySelectorAll('.slider-container');
-            sliders.forEach(slider => slider.style.display = 'none');  // Hide all sliders
-            const selectedSlider = document.getElementById(sliderId);
-            selectedSlider.style.display = 'flex';  // Show the selected slider
+     
         }
     </script>
     </div>
