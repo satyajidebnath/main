@@ -1,7 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sliding Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Allow footer to sit at the bottom */
+            min-height: 100vh; /* Ensure footer is at the bottom */
+        }
 
+        /* Basic page layout */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
 
+        header h1 {
+            margin: 0;
+        }
 
-<form method="post">
+        /* Menu icon always visible */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            display: block;  /* Menu icon is always visible */
+        }
+
+        /* Side menu styles */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -100%; /* Initially hidden off-screen */
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: left 0.3s ease;
+            z-index: 9;
+        }
+
+        .side-menu a {
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            text-align: center;
+        }
+
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+
+        .side-menu .close-btn {
+            font-size: 36px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            padding: 16px;
+            cursor: pointer;
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding: 16px;
+            padding-bottom: 60px; /* Create space for the footer */
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            display: none;
+            position: fixed;
+            top: 80px; /* Add space below the header */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px); /* Adjust height to account for the header */
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 8;
+        }
+
+        .slider-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header with menu icon -->
+    <header>
+        <h1>My Website</h1>
+        <span class="menu-icon" onclick="openMenu()">&#9776;</span>
+    </header>
+
+    <!-- Side menu -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="javascript:void(0)" onclick="showSlider('slider1')">Home</a>
+        <a href="javascript:void(0)" onclick="showSlider('slider2')">About</a>
+        <a href="javascript:void(0)" onclick="showSlider('slider3')">Services</a>
+        <a href="javascript:void(0)" onclick="showSlider('slider4')">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <div id="mainContent" class="main-content">
+      <form method="post">
 
 
 
@@ -245,7 +372,7 @@ select
 
 font-size: 26px;
 border-radius: 5px;
-width: 100px;
+width: 105px;
 margin-left: 2px;
 margin-right: 2px;
 text-align: center;
@@ -509,3 +636,50 @@ line-height: 70px;
 
 
 </script>
+
+
+        <!-- Slider Containers -->
+        <div id="slider1" class="slider-container">
+            <img src="https://via.placeholder.com/1200x800?text=Home+Slider" alt="Home Slider">
+        </div>
+        <div id="slider2" class="slider-container">
+            <img src="https://via.placeholder.com/1200x800?text=About+Slider" alt="About Slider">
+        </div>
+        <div id="slider3" class="slider-container">
+            <img src="https://via.placeholder.com/1200x800?text=Services+Slider" alt="Services Slider">
+        </div>
+        <div id="slider4" class="slider-container">
+            <img src="https://via.placeholder.com/1200x800?text=Contact+Slider" alt="Contact Slider">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Open the side menu
+        function openMenu() {
+            document.getElementById("sideMenu").style.left = "0";  // Slide in the side menu
+        }
+
+        // Close the side menu
+        function closeMenu() {
+            document.getElementById("sideMenu").style.left = "-100%";  // Hide the side menu
+        }
+
+        // Show the appropriate slider
+        function showSlider(sliderId) {
+            const sliders = document.querySelectorAll('.slider-container');
+            sliders.forEach(slider => slider.style.display = 'none');  // Hide all sliders
+            const selectedSlider = document.getElementById(sliderId);
+            selectedSlider.style.display = 'flex';  // Show the selected slider
+        }
+    </script>
+
+</body>
+</html>
+
+
+
