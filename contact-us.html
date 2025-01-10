@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+<meta name="google-adsense-account" content="ca-pub-2309600386705061">
+    <meta name="google-site-verification" content="_gajNeuYn4fQH1OFqzwFgPX0AKvAJ8vjfInQWOZNfZo" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2309600386705061"
+     crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Allow footer to sit at the bottom */
+            min-height: 100vh; /* Ensure footer is at the bottom */
+        }
+
+        /* Basic page layout */
+        header {
+            background-color: #3d32e7;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Menu icon always visible */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            display: block;  /* Menu icon is always visible */
+        }
+
+        /* Side menu styles */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -100%; /* Initially hidden off-screen */
+            width: 100%;
+            height: 100%;
+            background-color: #333333fa;
+            overflow-x: hidden;
+            transition: left 0.3s ease;
+            z-index: 9;
+        }
+
+        .side-menu a {
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            text-align: center;
+        }
+
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+
+        .side-menu .close-btn {
+            font-size: 36px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            padding: 16px;
+            cursor: pointer;
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding: 16px;
+            padding-bottom: 60px; /* Create space for the footer */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+                color: white;
+    text-decoration: blink;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header with menu icon -->
+<header>
+    <h1><a href="/">Free Tools</a></h1>
+    <span class="menu-icon" onclick="openMenu()">&#9776;</span>
+</header>
+
+
+    <!-- Side menu -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="/" target="_blank">Home</a>
+        <a href="/about-us.html" target="_blank">About</a>
+        <a href="/contact-us.html" target="_blank">Services</a>
+        <a href="/privacy-policy.html" target="_blank">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <div id="mainContent" class="main-content">
+<h2 style="text-align: center;">Contact Us</h2>
+
+<p>We'd love to hear from you! Whether you have questions, feedback, or suggestions, feel free to reach out to us. We're here to help and improve your experience on FreeTools.fun.</p>
+
+<p>You can contact us using the following methods:</p>
+
+<h3>Email</h3>
+<p>For any inquiries, support, or general questions, you can email us at: <a href="mailto:iamsatyajitdebnath@gmail.com">Mail Us</a></p>
+
+
+
+<h3>Feedback</h3>
+<p>We value your feedback! If you have any suggestions for new tools or improvements, please don't hesitate to let us know. Your input helps us serve you better.</p>
+
+<p>Thank you for being a part of FreeTools.fun. We look forward to hearing from you!</p>
+
+
+      
+          <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Free Tools. All rights reserved.</p>
+    </footer>
+      
+        <script>
+        // Open the side menu
+        function openMenu() {
+            document.getElementById("sideMenu").style.left = "0";
+        }
+
+        // Close the side menu
+        function closeMenu() {
+            document.getElementById("sideMenu").style.left = "-100%";
+        }
+    </script>
+
+</body>
+</html>
